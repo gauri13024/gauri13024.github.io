@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Manastha - Stable Mind</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/a81368914c.js" crossorigin="anonymous"></script> <!-- for icons -->
+</head>
+<body>
+  <header>
+    <div class="container header-container">
+      <a href="#" class="logo">
+  <img src="images/log.png" alt="Manastha Logo" />
+</a>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Tips</a></li>
+          <li><a href="#">Journal</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="nav-toggle" aria-label="toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-content">
+        <h2>Breathe. Heal. Grow.</h2>
+        <p>Manastha – Your calm companion for daily mental clarity.</p>
+        <a href="#" class="cta-button">Get Daily Mindful Tips </a>
+      </div>
+    </section>
+
+    <section class="tips">
+  <div class="container">
+    <h3>Today's Tips</h3>
+    <div class="tip-cards">
+      <div class="tip-card">
+        <img src="images/breathing.jpg" alt="Deep Breathing">
+        <p>Take 10 deep breaths before your next task.</p>
+      </div>
+      <div class="tip-card">
+        <img src="images/gratitude.jpg" alt="Gratitude Journal">
+        <p>Write down 3 things you're grateful for.</p>
+      </div>
+      <div class="tip-card">
+        <img src="images/mindful-drinking.jpg" alt="Mindful Drinking">
+        <p>Drink water mindfully — one sip at a time.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+  </main>
+
+  <footer>
+    <div class="container footer-content">
+      <p>© 2025 Manastha. All rights reserved.</p>
+      <p>
+        Explore:
+        <a href="#" target="_blank" rel="noopener">Calm</a> |
+        <a href="#" target="_blank" rel="noopener">Headspace</a> |
+        <a href="#" target="_blank" rel="noopener">Insight Timer</a>
+      </p>
+      <div class="social-icons">
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Responsive nav toggle
+    const navToggle = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    navToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('nav-open');
+    });
+  </script>
+</body>
+</html>

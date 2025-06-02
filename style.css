@@ -1,0 +1,420 @@
+/* Reset and base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  background: #f9f9fb;
+  color: #333;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Header */
+header {
+  background: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: #4a90e2;
+  cursor: default;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #4a90e2;
+}
+
+/* Nav toggle button for mobile */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  cursor: pointer;
+  color: #4a90e2;
+}
+
+/* Hero Section */
+/* .hero {
+  background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+  padding: 6rem 0 4rem;
+  text-align: center;
+  color: #222;
+} */
+.hero {
+  background-image: url('images/meditation.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 100px 20px;
+  color: white;
+  text-align: center;
+  position: relative;
+}
+
+/* Optional: dark overlay to improve text readability */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* semi-transparent black */
+  z-index: 1;
+}
+
+/* Put text on top of the overlay */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.hero h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-button {
+  background-color: hsl(212, 72%, 59%);
+  color: white;
+  padding: 1rem 2.5rem;
+  font-size: 1.1rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #357ABD;
+}
+
+/* Tips Section */
+.tips {
+  padding: 4rem 0;
+  background: white;
+  text-align: center;
+}
+
+.tips h3 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #4a90e2;
+}
+
+.tip-cards {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.tip-card {
+  background: #e8f0fe;
+  border-radius: 12px;
+  padding: 1.8rem 2rem;
+  flex: 1 1 250px;
+  font-weight: 500;
+  color: #334d8f;
+  box-shadow: 0 3px 8px rgba(74,144,226,0.15);
+  transition: transform 0.3s ease;
+  cursor: default;
+}
+
+.tip-card:hover {
+  transform: translateY(-6px);
+}
+
+/* Footer */
+footer {
+  background: hsl(212, 72%, 59%);
+  color: #eee;
+  padding: 2rem 0 3rem;
+  text-align: center;
+}
+
+.footer-content p {
+  margin-bottom: 0.7rem;
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+
+.footer-content a {
+  color: #a8caf3;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.footer-content a:hover {
+  text-decoration: underline;
+}
+
+.social-icons a {
+  color: #eee;
+  margin: 0 0.7rem;
+  font-size: 1.4rem;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #4a90e2;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background: white;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+    padding: 1rem 2rem;
+    width: 160px;
+  }
+
+  nav ul.nav-open {
+    display: flex;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  .tip-cards {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h2 {
+    font-size: 2.2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .cta-button {
+    padding: 0.9rem 2rem;
+    font-size: 1rem;
+  }
+}
+/* Flex layout for navbar */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo container */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+/* Logo image */
+.logo img {
+  height: 80px;       /* Ideal size for logo */
+  width: auto;
+  object-fit: contain;
+  vertical-align: middle;
+  margin: 0;
+  padding: 0;
+}
+
+
+.tip-cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.tip-card {
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  width: 250px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.tip-card:hover {
+  transform: translateY(-5px);
+}
+
+.tip-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.tip-card p {
+  font-size: 1rem;
+  color: #333;
+  margin: 0;
+}
+
+
+
+
+
+
+@media (max-width: 768px) {
+  /* Make nav toggle visible and stack nav links */
+  .nav-toggle {
+    display: block;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background: white;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    padding: 1rem 2rem;
+    width: 200px;
+  }
+
+  nav ul.nav-open {
+    display: flex;
+  }
+
+  .header-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo img {
+    height: 60px;
+  }
+
+  /* Stack hero content nicely */
+  .hero h2 {
+    font-size: 2.2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .cta-button {
+    padding: 0.9rem 1.8rem;
+    font-size: 1rem;
+  }
+
+  .tip-cards {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .tip-card {
+    width: 90%;
+    max-width: 320px;
+  }
+
+  footer {
+    padding: 2rem 1rem;
+  }
+
+  .footer-content p {
+    font-size: 0.8rem;
+  }
+
+  .social-icons a {
+    font-size: 1.2rem;
+    margin: 0 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h2 {
+    font-size: 1.8rem;
+  }
+
+  .hero p {
+    font-size: 0.9rem;
+  }
+
+  .cta-button {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  .tip-card img {
+    height: 120px;
+  }
+
+  .tip-card p {
+    font-size: 0.95rem;
+  }
+
+  .logo img {
+    height: 50px;
+  }
+}
+
+
+
